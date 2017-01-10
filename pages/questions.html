@@ -1,0 +1,20 @@
+<div class="jumbotron">
+	<h3>Questions</h3>
+  <p>Page : {{details.current_page}}</p>
+  <div class="card" ng-repeat="quest in details.Items">
+  <div class="card-block">
+    <div class="header-card">
+        <h5 class="card-title">{{quest.user_name}}</h5>
+        <a href={{quest.location_url}}>{{quest.location_url}}</a>
+    </div>
+    <div class="middle-card">
+      <p class="card-text">{{quest.message}}</p>
+    </div>
+    <div class="footer-card" ng-controller="questionDetails">
+        <button type="button" class="btn btn-primary btn-sm" ng-click="replyPage(quest.message,quest.question_id)">{{quest.total_replies}} Comments</button>
+        <button type="button" class="btn btn-link">{{quest.likes}} Likes</button>
+    </div>
+
+  </div>
+</div>
+</div>
